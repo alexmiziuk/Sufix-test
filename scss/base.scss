@@ -2,6 +2,8 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 html,
 body {
@@ -123,5 +125,246 @@ body {
 		width: 10px;
 		height: 10px;
 		margin: 2px;
+	}
+}
+.quiz-item {
+	display: flex;
+	padding: 12px;
+	margin-top: 16px;
+	flex-direction: column;
+	background-color: #ffffff;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	overflow: hidden;
+	width: 100%;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	&__image-container {
+		width: 99px;
+		height: 56px;
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 8px;
+		width: calc(100% - 99px);
+	}
+	&__title {
+		font-family: Arial, sans-serif;
+		font-weight: 700;
+		font-size: 14px;
+		color: #2e2e54;
+		margin: 0;
+		line-height: 1.3;
+	}
+}
+.quiz-meta {
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 12px;
+		height: 18px;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__details {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__details--calendar {
+		width: 85px;
+		height: 16px;
+		padding: 2px 0;
+	}
+	&__container-statistics-stars {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 144px;
+		height: 18px;
+	}
+	&__details--statistics {
+		width: 32px;
+	}
+	&__icon-calendar {
+		width: 14px;
+		height: 14px;
+	}
+	&__icon--statistics {
+		width: 14.6px;
+		height: 12px;
+		margin: 4px 1.4px;
+	}
+	&__details--stars {
+		width: 88px;
+	}
+	&__icon-star {
+		width: 16px;
+		height: 16px;
+	}
+	&__text {
+		font-family: Arial, sans-serif;
+		font-size: 12px;
+		color: #2e2e54;
+	}
+	&__number {
+		font-family: Arial, sans-serif;
+		font-size: 14px;
+		color: #2e2e54;
+	}
+}
+.breadcrumb {
+	width: 179px;
+	height: 16px;
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 0;
+		margin: 0;
+		margin-top: 8px;
+		list-style: none;
+	}
+	&__list-item {
+		position: relative;
+		display: block;
+		cursor: pointer;
+		&:not(:last-child) {
+			&::after {
+				content: "/";
+				position: absolute;
+				font-family: Arial, sans-serif;
+				font-weight: 400;
+				line-height: 1.3;
+				font-size: 12px;
+				color: #2e2e54;
+				margin: 2.5px 4px;
+			}
+		}
+	}
+	&__link {
+		font-family: Arial, sans-serif;
+		font-size: 12px;
+		font-weight: 400;
+		color: #2e2e54;
+		line-height: 1.3;
+		text-decoration: none;
+	}
+}
+.quiz-moderate {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 12px;
+	height: 40px;
+	&__container-progress {
+		display: flex;
+		flex-direction: column;
+	}
+	&__item-progress {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: Arial, sans-serif;
+		font-size: 10px;
+		font-weight: 700;
+		color: #d08939;
+		margin: 0;
+		height: 21px;
+		width: 107px;
+		border-radius: 50px;
+		background-color: rgba(208, 137, 57, 0.25);
+	}
+	&__start {
+		font-family: Arial, sans-serif;
+		margin: 0;
+		font-size: 12px;
+		line-height: 1.3;
+		font-weight: 400;
+		color: #69748c;
+		margin-top: 3px;
+	}
+	&__date {
+		color: #2e2e54;
+	}
+	&__container-name {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 139px;
+	}
+	&__circle {
+		height: 24px;
+		width: 24px;
+		border-radius: 50%;
+		background-color: #2e2e54;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__initials {
+		font-family: Arial, sans-serif;
+		font-size: 12px;
+		font-weight: 700;
+		color: #ffffff;
+		text-align: center;
+		line-height: 1;
+	}
+	&__name {
+		font-family: Arial, sans-serif;
+		font-size: 14px;
+		font-weight: 700;
+		color: #2e2e54;
+		line-height: 1.3;
+		margin: 0;
+	}
+	&__role {
+		font-family: Arial, sans-serif;
+		font-size: 12px;
+		font-weight: 400;
+		color: #69748c;
+		line-height: 1.3;
+		margin: 0;
+	}
+}
+.quiz-btns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 12px;
+	&__btn-attach,
+	&__btn-comment {
+		padding: 13.1px;
+		border: 1px solid rgba(210, 212, 216, 1);
+		border-radius: 6px;
+	}
+	&__icon-attach {
+		width: 14px;
+		height: 14px;
+	}
+	&__icon-comment {
+		width: 15.33px;
+		height: 15.33px;
+	}
+	&__btn-start-moderation {
+		font-family: Arial, sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		background-color: #d13980;
+		color: #ffffff;
+		padding: 15px 50px;
+		cursor: pointer;
+		border: none;
+		border-radius: 6px;
 	}
 }
