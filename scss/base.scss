@@ -97,7 +97,7 @@ body {
 
 $bg-color: #2e2e54;
 $text-color: #d2d4d8;
-$active-bg-color: #555272;
+$active-bg-color: rgba(209, 57, 128, 0.1);
 $active-text-color: #ffffff;
 $active-icon-color: #d13980;
 $font-stack: Arial, sans-serif;
@@ -137,7 +137,6 @@ $font-stack: Arial, sans-serif;
 				content: "";
 				margin: 12px 0 12px 16px;
 				display: block;
-				min-width: 328px;
 				height: 1px;
 				background-color: #444265;
 			}
@@ -167,7 +166,6 @@ $font-stack: Arial, sans-serif;
 		line-height: 1.3;
 		margin: 4px 0 4px 0;
 		padding-left: 16px;
-		transition: background-color 0.2s ease;
 		&--active {
 			padding-left: 12px;
 		}
@@ -533,5 +531,72 @@ $font-stack: Arial, sans-serif;
 	}
 	&__text {
 		margin-top: 4px;
+	}
+}
+.user {
+	&-sidebar {
+		&__footer {
+			margin-left: 16px;
+			margin-top: 223px;
+		}
+	}
+	&-info {
+		display: flex;
+		width: 122px;
+		height: 34px;
+		&__avatar {
+			width: 32px;
+			height: 32px;
+		}
+		&__details {
+			margin-left: 16px;
+			height: 16px;
+		}
+		&__name {
+			font-weight: 700;
+			font-size: 14px;
+			color: #ffffff;
+			line-height: 1.3;
+		}
+		&__role {
+			font-weight: 400;
+			font-size: 12px;
+			color: #d2d4d8;
+			line-height: 1.3;
+		}
+	}
+	&-ratings {
+		margin-top: 20px;
+		&__author-img,
+		&__user-img {
+			height: 12px;
+			width: 12px;
+		}
+		&__author-text,
+		&__user-text {
+			margin-left: 8px;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 1.3;
+			color: #d2d4d8;
+		}
+		&__author-container,
+		&__user-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 163px;
+			span {
+				margin-left: 8px;
+				font-weight: 700;
+				font-size: 12px;
+				line-height: 1.3;
+				color: #ffffff;
+			}
+		}
+		&__user-container {
+			margin-top: 8px;
+			width: 194px;
+		}
 	}
 }
