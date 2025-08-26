@@ -70,12 +70,14 @@ body {
   cursor: pointer;
 }
 .header__link {
-  font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: 30px;
   color: #d13980;
   text-decoration: none;
   cursor: pointer;
+}
+.header__nav {
+  display: none;
 }
 .header__link-avatar {
   display: flex;
@@ -140,9 +142,10 @@ body {
 .mobile-sidebar__nav-item--active {
   background-color: rgba(209, 57, 128, 0.1);
   border-left: 4px solid #d13980;
+  padding-left: 0;
 }
 .mobile-sidebar__nav-item--active .mobile-sidebar__link {
-  color: #ffffff;
+  color: #d13980;
 }
 .mobile-sidebar__nav-item--active .mobile-sidebar__icon {
   fill: #d13980;
@@ -181,7 +184,6 @@ body {
   width: 100%;
 }
 .main__title {
-  font-family: Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #ffffff;
@@ -209,6 +211,14 @@ body {
   width: 10px;
   height: 10px;
   margin: 2px;
+}
+
+.desktop-sidebar {
+  display: none;
+}
+
+.dashboard-container {
+  display: none;
 }
 
 .quiz-item {
@@ -244,7 +254,6 @@ body {
   width: calc(100% - 99px);
 }
 .quiz-item__title {
-  font-family: Arial, sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #2e2e54;
@@ -297,12 +306,10 @@ body {
   height: 16px;
 }
 .quiz-meta__text {
-  font-family: Arial, sans-serif;
   font-size: 12px;
   color: #2e2e54;
 }
 .quiz-meta__number {
-  font-family: Arial, sans-serif;
   font-size: 14px;
   color: #2e2e54;
 }
@@ -339,7 +346,6 @@ body {
   margin: 2.5px 4px;
 }
 .breadcrumb__link {
-  font-family: Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: #2e2e54;
@@ -379,7 +385,6 @@ body {
   color: #3b7dc9;
 }
 .quiz-moderate__start {
-  font-family: Arial, sans-serif;
   margin: 0;
   font-size: 12px;
   line-height: 1.3;
@@ -412,7 +417,6 @@ body {
   align-items: center;
 }
 .quiz-moderate__initials {
-  font-family: Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
   color: #ffffff;
@@ -420,7 +424,6 @@ body {
   line-height: 1;
 }
 .quiz-moderate__name {
-  font-family: Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: #2e2e54;
@@ -428,7 +431,6 @@ body {
   margin: 0;
 }
 .quiz-moderate__role {
-  font-family: Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: #69748c;
@@ -500,7 +502,6 @@ body {
   align-items: center;
   text-decoration: none;
   color: #d2d4d8;
-  font-family: Arial, sans-serif;
   font-weight: 700;
   font-size: 8px;
   line-height: 1.3;

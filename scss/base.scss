@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 *,
 *::before,
 *::after {
@@ -19,6 +21,7 @@ ol {
 body {
 	font-family: Arial, sans-serif;
 }
+
 .overflow-hidden {
 	overflow: hidden;
 }
@@ -29,7 +32,7 @@ body {
 }
 .header {
 	height: 54px;
-	background-color: #ffffff;
+	background-color: $white-color;
 	padding: 0 16px;
 	.container {
 		display: flex;
@@ -54,22 +57,24 @@ body {
 		align-items: center;
 		width: 85px;
 		height: 32px;
-		background-color: #d13980;
+		background-color: $primary-color;
 		border: none;
 		border-radius: 6px;
-		color: #ffffff;
+		color: $white-color;
 		font-family: Arial, sans-serif;
 		font-weight: 400;
 		font-size: 14px;
 		cursor: pointer;
 	}
 	&__link {
-		font-family: Arial, sans-serif;
 		font-weight: bold;
 		font-size: 30px;
-		color: #d13980;
+		color: $primary-color;
 		text-decoration: none;
 		cursor: pointer;
+	}
+	&__nav {
+		display: none;
 	}
 	&__link-avatar {
 		display: flex;
@@ -91,17 +96,9 @@ body {
 		display: block;
 		width: 100%;
 		height: 2px;
-		background-color: #2e2e54;
+		background-color: $primary-blue;
 	}
 }
-
-$bg-color: #2e2e54;
-$text-color: #d2d4d8;
-$active-bg-color: rgba(209, 57, 128, 0.1);
-$active-text-color: #ffffff;
-$active-icon-color: #d13980;
-$font-stack: Arial, sans-serif;
-
 .mobile-sidebar {
 	position: fixed;
 	top: 54px;
@@ -109,7 +106,7 @@ $font-stack: Arial, sans-serif;
 	width: 100%;
 	height: 100%;
 	padding: 16px 16px 0 0;
-	background-color: $bg-color;
+	background-color: $primary-blue;
 	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 	transition: left 0.3s ease-in-out;
 	z-index: 1000;
@@ -145,12 +142,13 @@ $font-stack: Arial, sans-serif;
 	&__nav-item {
 		&--active {
 			background-color: $active-bg-color;
-			border-left: 4px solid $active-icon-color;
+			border-left: 4px solid $primary-color;
+			padding-left: 0;
 			.mobile-sidebar__link {
-				color: $active-text-color;
+				color: $primary-color;
 			}
 			.mobile-sidebar__icon {
-				fill: $active-icon-color;
+				fill: $primary-color;
 			}
 		}
 	}
@@ -158,7 +156,7 @@ $font-stack: Arial, sans-serif;
 		display: flex;
 		align-items: center;
 		text-decoration: none;
-		color: $text-color;
+		color: $border-color;
 		padding: 8px 0 8px 0;
 		font-family: Arial, sans-serif;
 		font-weight: 400;
@@ -174,7 +172,7 @@ $font-stack: Arial, sans-serif;
 		width: 16px;
 		height: 16px;
 		margin-right: 12px;
-		fill: $text-color;
+		fill: $border-color;
 	}
 }
 .main {
@@ -187,10 +185,9 @@ $font-stack: Arial, sans-serif;
 		width: 100%;
 	}
 	&__title {
-		font-family: Arial, sans-serif;
 		font-weight: 700;
 		font-size: 18px;
-		color: #ffffff;
+		color: $white-color;
 		margin: 0;
 	}
 	&__btn-sort {
@@ -201,11 +198,11 @@ $font-stack: Arial, sans-serif;
 		font-weight: 400;
 		font-size: 14px;
 		background-color: rgba(255, 255, 255, 0);
-		color: #d13980;
+		color: $primary-color;
 		letter-spacing: -2%;
 		text-decoration: none;
 		padding: 9px 12px;
-		border: #d13980 1px solid;
+		border: $primary-color 1px solid;
 		border-radius: 6px;
 		span {
 			margin-left: 8px;
@@ -217,12 +214,18 @@ $font-stack: Arial, sans-serif;
 		margin: 2px;
 	}
 }
+.desktop-sidebar {
+	display: none;
+}
+.dashboard-container {
+	display: none;
+}
 .quiz-item {
 	display: flex;
 	padding: 12px;
 	margin-top: 16px;
 	flex-direction: column;
-	background-color: #ffffff;
+	background-color: $white-color;
 	border: 1px solid #e0e0e0;
 	border-radius: 6px;
 	overflow: hidden;
@@ -249,10 +252,9 @@ $font-stack: Arial, sans-serif;
 		width: calc(100% - 99px);
 	}
 	&__title {
-		font-family: Arial, sans-serif;
 		font-weight: 700;
 		font-size: 14px;
-		color: #2e2e54;
+		color: $primary-blue;
 		margin: 0;
 		line-height: 1.3;
 	}
@@ -303,14 +305,12 @@ $font-stack: Arial, sans-serif;
 		height: 16px;
 	}
 	&__text {
-		font-family: Arial, sans-serif;
 		font-size: 12px;
-		color: #2e2e54;
+		color: $primary-blue;
 	}
 	&__number {
-		font-family: Arial, sans-serif;
 		font-size: 14px;
-		color: #2e2e54;
+		color: $primary-blue;
 	}
 }
 .breadcrumb {
@@ -340,16 +340,15 @@ $font-stack: Arial, sans-serif;
 				font-weight: 400;
 				line-height: 1.3;
 				font-size: 12px;
-				color: #2e2e54;
+				color: $primary-blue;
 				margin: 2.5px 4px;
 			}
 		}
 	}
 	&__link {
-		font-family: Arial, sans-serif;
 		font-size: 12px;
 		font-weight: 400;
-		color: #2e2e54;
+		color: $primary-blue;
 		line-height: 1.3;
 		text-decoration: none;
 	}
@@ -374,18 +373,17 @@ $font-stack: Arial, sans-serif;
 		font-family: Arial, sans-serif;
 		font-size: 10px;
 		font-weight: 700;
-		color: #d08939;
+		color: $orange-color;
 		margin: 0;
 		padding: 4px 12px;
 		border-radius: 50px;
 		background-color: rgba(208, 137, 57, 0.25);
 		&--not-moderated {
 			background-color: rgba(59, 125, 201, 0.25);
-			color: #3b7dc9;
+			color: $blue-color;
 		}
 	}
 	&__start {
-		font-family: Arial, sans-serif;
 		margin: 0;
 		font-size: 12px;
 		line-height: 1.3;
@@ -397,7 +395,7 @@ $font-stack: Arial, sans-serif;
 		}
 	}
 	&__date {
-		color: #2e2e54;
+		color: $primary-blue;
 	}
 	&__container-name {
 		display: flex;
@@ -412,29 +410,26 @@ $font-stack: Arial, sans-serif;
 		height: 24px;
 		width: 24px;
 		border-radius: 50%;
-		background-color: #2e2e54;
+		background-color: $primary-blue;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 	&__initials {
-		font-family: Arial, sans-serif;
 		font-size: 12px;
 		font-weight: 700;
-		color: #ffffff;
+		color: $white-color;
 		text-align: center;
 		line-height: 1;
 	}
 	&__name {
-		font-family: Arial, sans-serif;
 		font-size: 14px;
 		font-weight: 700;
-		color: #2e2e54;
+		color: $primary-blue;
 		line-height: 1.3;
 		margin: 0;
 	}
 	&__role {
-		font-family: Arial, sans-serif;
 		font-size: 12px;
 		font-weight: 400;
 		color: #69748c;
@@ -468,8 +463,8 @@ $font-stack: Arial, sans-serif;
 		font-family: Arial, sans-serif;
 		font-weight: 400;
 		font-size: 14px;
-		background-color: #d13980;
-		color: #ffffff;
+		background-color: $primary-color;
+		color: $white-color;
 		padding: 15px 50px;
 		cursor: pointer;
 		border: none;
@@ -478,7 +473,7 @@ $font-stack: Arial, sans-serif;
 }
 .footer {
 	position: fixed;
-	background-color: #2e2e54;
+	background-color: $primary-blue;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -495,8 +490,8 @@ $font-stack: Arial, sans-serif;
 		padding: 10px 0 8px 0;
 		width: 100%;
 		&--active {
-			background-color: rgba(209, 57, 128, 0.1);
-			border-top: #d13980 solid 2px;
+			background-color: $active-bg-color;
+			border-top: $primary-color solid 2px;
 		}
 	}
 	&__link {
@@ -505,8 +500,7 @@ $font-stack: Arial, sans-serif;
 		justify-content: center;
 		align-items: center;
 		text-decoration: none;
-		color: #d2d4d8;
-		font-family: Arial, sans-serif;
+		color: $border-color;
 		font-weight: 700;
 		font-size: 8px;
 		line-height: 1.3;
@@ -524,9 +518,9 @@ $font-stack: Arial, sans-serif;
 	&__icon {
 		width: 16px;
 		height: 16px;
-		fill: #d2d4d8;
+		fill: $border-color;
 		&--active {
-			fill: #d13980;
+			fill: $primary-color;
 		}
 	}
 	&__text {
@@ -555,13 +549,13 @@ $font-stack: Arial, sans-serif;
 		&__name {
 			font-weight: 700;
 			font-size: 14px;
-			color: #ffffff;
+			color: $white-color;
 			line-height: 1.3;
 		}
 		&__role {
 			font-weight: 400;
 			font-size: 12px;
-			color: #d2d4d8;
+			color: $border-color;
 			line-height: 1.3;
 		}
 	}
@@ -578,7 +572,7 @@ $font-stack: Arial, sans-serif;
 			font-weight: 400;
 			font-size: 12px;
 			line-height: 1.3;
-			color: #d2d4d8;
+			color: $border-color;
 		}
 		&__author-container,
 		&__user-container {
@@ -591,7 +585,7 @@ $font-stack: Arial, sans-serif;
 				font-weight: 700;
 				font-size: 12px;
 				line-height: 1.3;
-				color: #ffffff;
+				color: $white-color;
 			}
 		}
 		&__user-container {
