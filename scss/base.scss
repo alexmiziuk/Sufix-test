@@ -442,6 +442,9 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 12px;
+	&__text {
+		display: none;
+	}
 	&__btn-attach,
 	&__btn-comment {
 		padding: 13.1px;

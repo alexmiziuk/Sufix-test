@@ -1,6 +1,6 @@
 @import "variables";
 
-@media (min-width: 1919px) {
+@media (min-width: 1024px) {
 	.header {
 		height: 64px;
 		.wrapper {
@@ -15,7 +15,7 @@
 		}
 		&__link {
 			font-size: 40px;
-			margin-left: -447px;
+			margin-left: 15px;
 		}
 		&__nav {
 			display: block;
@@ -64,8 +64,8 @@
 	.desktop-sidebar {
 		display: block;
 		position: relative;
-		width: 240px;
-		height: 100vh;
+		width: 285px;
+		height: auto;
 		background-color: $primary-blue;
 
 		&__section {
@@ -208,7 +208,7 @@
 	.quizzes-grid {
 		margin-top: 17px;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 16px;
 		grid-column-gap: 16px;
 	}
@@ -221,6 +221,29 @@
 	}
 	.quiz-btns {
 		margin-top: 16px;
+		&__icon-comment-received {
+			display: none;
+			width: 12px;
+			height: 12px;
+		}
+		&__icon-comment {
+			width: 12px;
+			height: 12px;
+			fill: rgba(46, 46, 84, 0.4);
+		}
+		&__btn-comment {
+			&--active {
+				.quiz-btns__icon-comment {
+					display: none;
+				}
+				.quiz-btns__icon-comment-received {
+					display: block;
+				}
+				.quiz-btns__text {
+					color: $primary-blue;
+				}
+			}
+		}
 		&__btn-start-moderation {
 			padding: 9px 21px;
 		}
@@ -243,9 +266,12 @@
 	.quiz-btns__text {
 		font-weight: 400;
 		font-size: 14px;
-		color: $primary-blue;
+		color: rgba(46, 46, 84, 0.4);
 		margin-left: 4px;
-		
+		display: block;
+		&--active {
+			color: $primary-blue;
+		}
 	}
 	.dashboard-header {
 		display: flex;
@@ -264,13 +290,16 @@
 			text-decoration: none;
 			color: $primary-color;
 			font-weight: 400;
-			font-size: 14px;
+			font-size: 12px;
 			line-height: 1.3;
 			cursor: pointer;
 		}
 		&__link-img {
 			margin-left: 4px;
 		}
+	}
+	.quiz-item__image--desktop-card {
+		border-radius: 6px;
 	}
 	.dashboard-content-layout {
 		&__container {
@@ -294,5 +323,57 @@
 	}
 	.user-sidebar__footer--desktop {
 		margin-top: 444px;
+	}
+}
+
+@media (min-width: 1280px) {
+	.header {
+		&__link {
+			margin-left: -110px;
+		}
+	}
+	.desktop-sidebar {
+		width: 275px;
+	}
+	.quizzes-grid {
+		grid-row-gap: 25px;
+		grid-column-gap: 25px;
+	}
+	.dashboard-header {
+		&__link {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.header {
+		&__link {
+			margin-left: -188px;
+		}
+	}
+	.desktop-sidebar {
+		width: 270px;
+	}
+	.quizzes-grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-row-gap: 16px;
+		grid-column-gap: 16px;
+	}
+}
+
+@media (min-width: 1919px) {
+	.header {
+		&__link {
+			margin-left: -447px;
+		}
+	}
+	.desktop-sidebar {
+		width: 240px;
+	}
+	.quizzes-grid {
+		grid-template-columns: repeat(4, 1fr);
+		grid-row-gap: 16px;
+		grid-column-gap: 16px;
 	}
 }

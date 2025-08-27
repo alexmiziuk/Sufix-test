@@ -444,6 +444,9 @@ body {
   align-items: center;
   margin-top: 12px;
 }
+.quiz-btns__text {
+  display: none;
+}
 .quiz-btns__btn-attach, .quiz-btns__btn-comment {
   padding: 13.1px;
   border: 1px solid rgb(210, 212, 216);
