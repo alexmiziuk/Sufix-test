@@ -117,7 +117,6 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.3;
-    margin: 4px 0 4px 0;
     cursor: pointer;
   }
   .desktop-sidebar__nav-link--active {
@@ -127,6 +126,7 @@
     padding-left: 16px;
     display: flex;
     align-items: center;
+    margin: 4px 0 4px 0;
   }
   .desktop-sidebar__nav-item--active {
     background-color: rgba(209, 57, 128, 0.1);
