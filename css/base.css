@@ -462,6 +462,7 @@ body {
 .quiz-btns__icon-comment {
   width: 15.33px;
   height: 15.33px;
+  display: none;
 }
 .quiz-btns__btn-start-moderation {
   font-family: Arial, sans-serif;

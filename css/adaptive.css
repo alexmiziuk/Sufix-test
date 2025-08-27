@@ -1,3 +1,16 @@
+@media (min-width: 768px) {
+  .quizzes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 16px;
+  }
+  .quiz-moderate--not-moderated {
+    height: 40px;
+  }
+  .quiz-moderate--not-moderated {
+    height: 60px;
+  }
+}
 @media (min-width: 1024px) {
   .header {
     height: 64px;
@@ -223,6 +236,7 @@
     height: 12px;
   }
   .quiz-btns__icon-comment {
+    display: block;
     width: 12px;
     height: 12px;
     fill: rgba(46, 46, 84, 0.4);
