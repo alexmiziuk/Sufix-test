@@ -594,5 +594,7 @@ body {
   margin-top: 8px;
   width: 194px;
 }
-
+.quizzes-grid {
+	padding-bottom: 40px;
+}
 /*# sourceMappingURL=base.css.map */
