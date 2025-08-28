@@ -230,6 +230,9 @@
   .quiz-btns {
     margin-top: 16px;
   }
+  .quiz-btns__btn-attach {
+    cursor: pointer;
+  }
   .quiz-btns__icon-comment-received {
     display: none;
     width: 12px;
@@ -240,6 +243,9 @@
     width: 12px;
     height: 12px;
     fill: rgba(46, 46, 84, 0.4);
+  }
+  .quiz-btns__btn-comment {
+    cursor: pointer;
   }
   .quiz-btns__btn-comment--active .quiz-btns__icon-comment {
     display: none;
