@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	const mobileSidebarItems = document.querySelectorAll('.mobile-sidebar__nav-item');
 	const footerMobileNavItems = document.querySelectorAll('.footer-mobile-nav__item');
 	const desktopNavItems = document.querySelectorAll('.desktop-sidebar__nav-item');
+	const header = document.querySelector(".header");
+	const main = document.querySelector(".main");
+	
 
 	function toggleActive(clickedItem, items, activeItemClass, activeLinkClass, activeIconClass) {
 
@@ -50,4 +53,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			toggleActive(item, desktopNavItems, 'desktop-sidebar__nav-item--active', 'desktop-sidebar__nav-link--active', 'desktop-sidebar__icon--active');
 		});
 	});
+
+
+	function updateOffsets() {
+		if (!header) return;
+		const headerHeight = header.offsetHeight;
+
+		if (main) {
+			main.style.marginTop = headerHeight + "px";
+		}
+
+		if (mobileSidebar) {
+			mobileSidebar.style.top = headerHeight + "px";
+		}
+	}
+
+	updateOffsets();
+
+	window.addEventListener("resize", updateOffsets);
+
+	const observer = new ResizeObserver(updateOffsets);
+	if (header) observer.observe(header);
 });
