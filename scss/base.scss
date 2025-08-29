@@ -461,8 +461,14 @@ body {
 	}
 	&__btn-comment {
 		padding: 12.5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	&__icon-attach {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 14px;
 		height: 14px;
 	}
@@ -473,6 +479,9 @@ body {
 	}
 	&__btn-start-moderation {
 		font-family: Arial, sans-serif;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		font-weight: 400;
 		font-size: 14px;
 		background-color: $primary-color;
