@@ -218,7 +218,9 @@ body {
 .dashboard-container {
 	display: none;
 }
-
+.quizzes-grid {
+	padding-bottom: 40px;
+}
 .quiz-item {
 	display: flex;
 	padding: 12px;
@@ -449,6 +451,7 @@ body {
 		padding: 13.1px;
 		border: 1px solid rgba(210, 212, 216, 1);
 		border-radius: 6px;
+		background-color: $white-color;
 	}
 	&__btn-comment {
 		padding: 12.5px;

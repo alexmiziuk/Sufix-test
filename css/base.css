@@ -219,6 +219,10 @@ body {
   display: none;
 }
 
+.quizzes-grid {
+  padding-bottom: 40px;
+}
+
 .quiz-item {
   display: flex;
   padding: 12px;
@@ -449,6 +453,7 @@ body {
   padding: 13.1px;
   border: 1px solid rgb(210, 212, 216);
   border-radius: 6px;
+  background-color: #ffffff;
 }
 .quiz-btns__btn-comment {
   padding: 12.5px;
@@ -594,7 +599,5 @@ body {
   margin-top: 8px;
   width: 194px;
 }
-.quizzes-grid {
-	padding-bottom: 40px;
-}
+
 /*# sourceMappingURL=base.css.map */
