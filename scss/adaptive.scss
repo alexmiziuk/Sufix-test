@@ -291,6 +291,7 @@
 	.quiz-moderate {
 		width: 321px;
 		&--not-moderated {
+			align-items: start;
 			height: 40px;
 		}
 	}

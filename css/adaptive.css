@@ -280,6 +280,7 @@
     width: 321px;
   }
   .quiz-moderate--not-moderated {
+    align-items: start;
     height: 40px;
   }
   .quiz-btns__btn-comment {
