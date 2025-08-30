@@ -459,6 +459,7 @@ body {
   padding: 13.1px;
   border: 1px solid rgb(210, 212, 216);
   border-radius: 6px;
+  height: 44px;
   background-color: #ffffff;
 }
 .quiz-btns__btn-comment {
@@ -481,6 +482,7 @@ body {
 }
 .quiz-btns__btn-start-moderation {
   font-family: Arial, sans-serif;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
