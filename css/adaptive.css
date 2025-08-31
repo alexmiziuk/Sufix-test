@@ -326,6 +326,12 @@
   .quiz-item__image--desktop-card {
     border-radius: 6px;
   }
+  .quiz-meta__icon-star {
+    fill: #d2d4d8;
+  }
+  .quiz-meta__icon-star--active {
+    fill: #d13980;
+  }
   .dashboard-content-layout__container {
     display: flex;
   }
@@ -339,6 +345,18 @@
   }
   .dashboard-content-layout__table-btn {
     margin-right: 16px;
+  }
+  .dashboard-content-layout__table-btn-icon {
+    fill: #69748c;
+  }
+  .dashboard-content-layout__table-btn-icon--active {
+    fill: #d13980;
+  }
+  .dashboard-content-layout__card-btn-icon {
+    fill: #69748c;
+  }
+  .dashboard-content-layout__card-btn-icon--active {
+    fill: #d13980;
   }
   .footer {
     display: none;

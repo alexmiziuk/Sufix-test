@@ -338,6 +338,14 @@
 	.quiz-item__image--desktop-card {
 		border-radius: 6px;
 	}
+	.quiz-meta {
+		&__icon-star {
+			fill: $border-color;
+			&--active {
+				fill: $primary-color;
+			}
+		}
+	}
 	.dashboard-content-layout {
 		&__container {
 			display: flex;
@@ -353,6 +361,18 @@
 		}
 		&__table-btn {
 			margin-right: 16px;
+		}
+		&__table-btn-icon {
+			fill: $text-color-light;
+			&--active {
+				fill: $primary-color;
+			}
+		}
+		&__card-btn-icon {
+			fill: $text-color-light;
+			&--active {
+				fill: $primary-color;
+			}
 		}
 	}
 	.footer {
