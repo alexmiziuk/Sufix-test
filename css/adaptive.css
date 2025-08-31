@@ -287,13 +287,7 @@
     display: none;
   }
   .quiz-moderate__initials-avatar {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
+    display: flex;
   }
   .quiz-btns__btn-comment {
     display: flex;

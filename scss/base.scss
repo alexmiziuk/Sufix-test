@@ -116,8 +116,8 @@ body {
 	z-index: 1000;
 	&--open {
 		left: 0;
-		right: 0; 
-		bottom: 0; 
+		right: 0;
+		bottom: 0;
 	}
 	&__header {
 		display: flex;
@@ -424,6 +424,13 @@ body {
 		align-items: center;
 	}
 	&__initials-avatar {
+		display: flex;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		justify-content: center;
+		align-items: center;
+		z-index: 2;
 		display: none;
 	}
 	&__initials {
