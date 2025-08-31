@@ -294,6 +294,18 @@
 			align-items: start;
 			height: 40px;
 		}
+		&__initials {
+			display: none;
+		}
+		&__initials-avatar {
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			display: flex !important;
+			justify-content: center;
+			align-items: center;
+			z-index: 2;
+		}
 	}
 	.quiz-btns__btn-comment {
 		display: flex;

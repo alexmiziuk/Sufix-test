@@ -423,6 +423,9 @@ body {
 		justify-content: center;
 		align-items: center;
 	}
+	&__initials-avatar {
+		display: none;
+	}
 	&__initials {
 		font-size: 12px;
 		font-weight: 700;

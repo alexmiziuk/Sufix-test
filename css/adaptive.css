@@ -283,6 +283,18 @@
     align-items: start;
     height: 40px;
   }
+  .quiz-moderate__initials {
+    display: none;
+  }
+  .quiz-moderate__initials-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
   .quiz-btns__btn-comment {
     display: flex;
     justify-content: space-between;
